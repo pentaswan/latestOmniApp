@@ -1,6 +1,6 @@
 import { WebView } from 'react-native-webview';
 import { useEffect, useState, useRef } from 'react';
-import { View, AppState, ActivityIndicator, StyleSheet, ImageBackground, Dimensions } from 'react-native';
+import { View, AppState, ActivityIndicator, StyleSheet, ImageBackground, Dimensions, StatusBar } from 'react-native';
 
 export default function App() {
   const webViewRef = useRef(null);
@@ -26,6 +26,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar hidden />
       <WebView
         source={{uri: 'https://omnipotent.site/' }}
         style={styles.webView}
